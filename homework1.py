@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
-informatics = np.random.normal(3.5, 1.5, 250)
-economics = np.random.normal(2.5, 1.0, 250)
-philology = np.random.normal(2.0, 0.8, 250)
+informatics = np.clip(np.random.normal(3.5, 1.5, 250), 0, None)
+economics = np.clip(np.random.normal(2.5, 1.0, 250), 0, None)
+philology = np.clip(np.random.normal(2.0, 0.8, 250), 0, None)
 
 plt.figure(figsize=(10, 6))
 plt.hist(informatics, bins=20, alpha=0.6, label="Информатика")
